@@ -1,0 +1,188 @@
+body {
+    font-size: 16px;
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.banner-carousel {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 5%;
+    z-index: 1000;
+}
+
+.game-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+.game-list button:hover {
+    background-color: #3090C7;
+}
+.game-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.game-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.game-card-name {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #333;
+}
+
+.category-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 5px ;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.category-buttons button {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.category-buttons button:hover {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.category-buttons button .category-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.favorites {
+    margin-top: 30px;
+}
+
+.favorite-games {
+    display: flex;
+    flex-wrap: wrap;
+width: 100px;
+    height: 100px;
+}
+
+.favorite-card {
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    height: 100px;
+}
+
+.favorite-card img {
+    width: 100%;
+    height: auto;
+}
+
+.favorite-card h3 {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.filters input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.filters input:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+.filters input::placeholder {
+    color: #888;
+    font-style: italic;
+}
+.header {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+    height: 8%;
+}
+
+@media (max-width: 768px) {
+    .parent {
+        flex-direction: column;
+    }
+}
+@media (min-width: 768px) {
+    .game-card {
+        width: 40%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .category-buttons {
+        justify-content: space-around;
+    }
+
+    .category-buttons button {
+        flex: 1 1 45%;
+        font-size: 12px;
+    }
+}
+@media (max-width: 768px) {
+    .category-buttons {
+        flex-direction: column;
+    }
+
+    .category-buttons button {
+        margin-bottom: 10px;
+    }
+} -a
+@media (max-width: 768px) {
+    .filters input {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
